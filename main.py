@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 from selenium import webdriver
 from time import sleep
 import random as rnd
@@ -9,7 +9,6 @@ print(r""" CODED BY :
 |_|_||_\_|`___'|___/|_|<___/
 
 Contact : https://github.com/mohamedmed01345
-          +201200840441
           https://www.facebook.com/Anubis-549848145502585
 """.center(20,"="))
 blg_link = input("Enter your Blogger Link : ")
@@ -18,7 +17,7 @@ proxy = open("proxy.txt","r")
 prxa = proxy.readlines()
 rnd.shuffle(prxa)
 def srata() :
-    prxaa = sample(prxa,1)
+    prxaa = rnd.sample(prxa,1)
     myProxy = prxaa[0].strip()
     webdriver.DesiredCapabilities.FIREFOX["proxy"] = {
     "httpProxy":myProxy,
